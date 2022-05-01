@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #13293D;
+}
+
+.conteudo {
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.473);
+    width: 560px;
+    height: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.topo {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.topo input {
+    width: 85%;
+    height: 50px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    font-size: 1.2rem;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+.topo button {
+    width: 40px;
+    height: 50px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+}
+
+.topo button:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+#listaTarefas {
+    margin: auto;
+    list-style: none;
+    width: 80%;
+}
+
+#listaTarefas li {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.473);
+    border: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+#listaTarefas li div {
+    display: flex;
+    align-items: center;
+}
+
+.textoTarefa {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.822);
+    margin-left: 8px;
+}
+
+
+.divBtnAcao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnAcao {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.473);
+    color: #fff;
+    cursor: pointer;
+}
+
+.btnAcao:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.466);
+}
+
+#telaDeErro {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    width: 435px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.473);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.096);
+    z-index: 200;
+    display: none;
+}
+
+#telaDeErro.show {
+    display: block;
+}
+
+#telaDeErro p {
+    margin: auto;
+}
+
+#telaDeErro button {
+    width: 82%;
+    height: 40px;
+    margin-top: 20px;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+}
+
+#telaDeErro button:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+#telaExclusao {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    width: 435px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.473);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.096);
+    z-index: 200;
+    display: none;
+}
+
+#telaExclusao.show {
+    display: block;
+}
+
+#telaExclusao h2 {
+    display: none;
+}
+
+#telaExclusao p {
+    margin: auto;
+}
+
+#telaExclusao div {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+}
+
+#telaExclusao button {
+    width: 45%;
+    height: 40px;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+}
+
+#telaExclusao button:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+#telaEdicao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    width: 435px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.473);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.096);
+    z-index: 200;
+    display: none;
+}
+
+#telaEdicao.show {
+    display: block;
+}
+
+#telaEdicao > #divPrincipal {
+    margin: auto;
+    width: 390px;
+}
+
+#divPrincipal > hr {
+    margin-bottom: 20px;
+}
+
+#telaEdicao input {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    margin-top: 7px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    font-size: 1.2rem;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+#salvarNovoTarefaTexto {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+}
+
+#salvarNovoTarefaTexto:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+#btFecharTelaEd {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.473);
+    color: #fff;
+    font-size: 14pt;
+    cursor: pointer;
+}
+
+#btFecharTelaEd:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.466);
+}
+
+#textoIdTelaEd {
+    margin-bottom: 20px;
+}
+
+#janelaDeFundo {
+    position: fixed;
+    top: 0;
+    opacity: 95%;
+    width: 100%;
+    height: 100vh;
+    background-color: #13293D;
+    z-index: 100;
+    display: none;
+}
+
+#janelaDeFundo.show {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .conteudo {
+        width: 100%;
+        margin-top: 0px;
+        background-color: transparent;
+    }
+
+    .topo {
+        width: 90%;
+    }
+
+    #listaTarefas {
+        width: 90%;
+    }
+
+    .btCheckbox {
+        display: none;
+    }
+
+    .textoTarefa {
+        width: 200px;
+    }
+
+    #telaEdicao {
+        top: 40%;
+        width: 90%;
+        border-radius: 12px;
+    }
+
+    #telaEdicao > #divPrincipal {
+        width: 85%;
+    }
+
+    #telaDeErro {
+        top: 40%;
+        width: 90%;
+    }
+
+    #telaDeErro p {
+        width: 279px;
+    }
+
+    #telaExclusao {
+        top: 40%;
+        width: 90%;
+    }
+
+    #telaExclusao p {
+        width: 279px;
+        font-size: 15px;
+    }
+
+    #telaExclusao button {
+        width: 47%;
+    }
+}

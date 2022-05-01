@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#13293D"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="conteudo">
+
+        <div class="topo">
+            <input type="text" id="inputTarefaTexto" placeholder="Adicione uma nova tarefa" maxlength="22">
+            <button id="btnTarefa">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+        <ul id="listaTarefas"></ul>
+
+    </div>
+
+    <div id="telaDeErro">
+        <div>
+            <p>[ERRO] Você não escreveu o nome da tarefa!</p>
+        </div>
+        <div>
+            <button id="btnFecharTelaErro">Ok</button>
+        </div>
+    </div>
+
+    <div id="telaExclusao">
+        <h2 id="idTextoExclusao">0000</h2>
+        <p>Tem certeza que deseja excluir essa tarefa?</p>
+        <div>
+            <button id="SimExlucir">
+                Sim
+            </button>
+            <button id="NaoExcluir">
+                Não
+            </button>
+        </div>
+    </div>
+
+    <div id="telaEdicao">
+        <div id="divPrincipal">
+            <button id="btFecharTelaEd">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 id="textoIdTelaEd">#0000</h2>
+            <hr>
+            <form>
+                <div>
+                    <label for="novoTextoTarefa">Nome</label>
+                    <input type="text" id="novoTextoTarefa" maxlength="22">
+                </div>
+                <div>
+                    <button id="salvarNovoTarefaTexto">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="janelaDeFundo"></div>
+    
+    <audio src="error_CDOxCYm.mp3"></audio>
+    <script src="https://kit.fontawesome.com/45a1c2ef02.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
